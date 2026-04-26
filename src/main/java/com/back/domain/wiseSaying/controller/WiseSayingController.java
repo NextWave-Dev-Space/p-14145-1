@@ -82,7 +82,6 @@ public class WiseSayingController {
         modify(wiseSaying, content, author);
     }
 
-    // 내부로직 시작
     private List<WiseSaying> findForList() {
         return wiseSayings.reversed();
     }
@@ -109,13 +108,9 @@ public class WiseSayingController {
     }
 
     private boolean delete(int id) {
-        // 기존 로직보다 성능은 안 좋지만, 가독성이 좋음
-        // 실무에서는 이런 선택을 하면 안된다.
-        // 하지만 removeIf를 보여주기 위해서 사용함
         return wiseSayings
                 .removeIf(
                         wiseSaying -> wiseSaying.getId() == id
                 );
     }
-    // 내부로직 끝
 }

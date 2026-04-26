@@ -7,8 +7,7 @@ import java.util.Scanner;
 
 public class App {
     private final Scanner scanner = new Scanner(System.in);
-
-    // 진입점 시작
+    
     public void run() {
         System.out.println("== 명언 앱 ==");
 
